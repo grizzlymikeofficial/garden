@@ -1,0 +1,29 @@
+{
+  "name": "garden",
+  "description": "",
+  "author": "Damon Zucconi",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dzucconi/garden"
+  },
+  "scripts": {
+    "generate": "node scripts/generateSvgs",
+    "clean": "rm -rf dist/",
+    "copy:images": "mkdir -p dist && mkdir -p dist/images && cp -R src/images/* dist/images",
+    "copy:svgs": "mkdir -p dist && mkdir -p dist/svgs && cp -R src/svgs/* dist/svgs",
+    "copy": "yarn copy:images && yarn copy:svgs",
+    "build": "yarn copy && parcel build src/index.html",
+    "start": "yarn copy && parcel src/index.html --open"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "frame-interval": "^0.0.2",
+    "howler": "^2.0.15",
+    "imagesloaded": "^4.1.4",
+    "lodash.debounce": "^4.0.8",
+    "queryparams": "0.0.7"
+  }
+}
