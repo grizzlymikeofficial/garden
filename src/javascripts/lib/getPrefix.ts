@@ -1,10 +1,11 @@
-export default () => {
+export const getPrefix = () => {
   const styles = window.getComputedStyle(document.documentElement, "");
 
-  const pre = (Array.prototype.slice
+  const pre: string = (Array.prototype.slice
     .call(styles)
     .join("")
     .match(/-(moz|webkit|ms)-/) ||
+    // @ts-ignore
     (styles.OLink === "" && ["", "o"]))[1];
 
   const dom = "WebKit|Moz|MS|O".match(new RegExp(`(${pre})`, "i"))[1];

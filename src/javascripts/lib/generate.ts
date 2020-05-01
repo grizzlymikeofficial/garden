@@ -1,9 +1,19 @@
-import style from "./style";
+import { style } from "./style";
 
 const image = ({ src }) =>
   `<div class='Layer__image' style='background-image: url(${src})'></div>`;
 
-const layer = ({ src, mask, size, rotation }) => {
+const layer = ({
+  src,
+  mask,
+  size,
+  rotation,
+}: {
+  src: string;
+  mask: string;
+  size: number;
+  rotation: number;
+}) => {
   const styles = style({
     filter: `hue-rotate(${rotation}deg)`,
     mask: `url(svgs/${mask}--${size}.svg)`,
@@ -12,7 +22,4 @@ const layer = ({ src, mask, size, rotation }) => {
   return `<div class='Layer' style='${styles}'>${image({ src })}</div>`;
 };
 
-export default {
-  layer,
-  image,
-};
+export const generate = { layer, image };

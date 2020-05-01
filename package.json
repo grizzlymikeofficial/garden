@@ -17,7 +17,8 @@
     "start": "yarn copy && parcel src/index.html --open"
   },
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "frame-interval": "^0.0.2",
