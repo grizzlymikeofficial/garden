@@ -88,17 +88,15 @@ const STRATEGIES: Strategy[] = [
 
 const size = () => {
   // More likely to sample the small sizes rather than the large
-  return sample(
-    sample([
-      SIZES.small,
-      SIZES.small,
-      SIZES.small,
-      SIZES.small,
-      SIZES.medium,
-      SIZES.medium,
-      SIZES.large,
-    ])
-  );
+  return sample([
+    ...SIZES.extraSmall,
+    ...SIZES.small,
+    ...SIZES.small,
+    ...SIZES.small,
+    ...SIZES.small,
+    ...SIZES.medium,
+    ...SIZES.large,
+  ]);
 };
 
 const load = (src: string) =>
