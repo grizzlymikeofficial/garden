@@ -1,5 +1,10 @@
-const fs = require("fs");
-const { SIZES } = require("../src/javascripts/config");
+import * as fs from "fs";
+import { SIZES } from "../src/javascripts/config";
+
+const allSizes = Object.keys(SIZES).reduce(
+  (acc, key) => [...acc, ...SIZES[key]],
+  []
+);
 
 const GENERATORS = {
   ad: (size) => `<svg width="${size * 2}" height="${
@@ -43,7 +48,7 @@ const NAMES = Object.keys(GENERATORS);
 
 const writeSVGs = () => {
   NAMES.forEach((name) => {
-    SIZES.forEach((size) => {
+    allSizes.forEach((size) => {
       const xml = GENERATORS[name](size);
       fs.writeFile(`./src/svgs/${name}--${size}.svg`, xml, (err) => {
         if (err) return console.log(err);

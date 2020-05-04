@@ -8,7 +8,7 @@
     "url": "https://github.com/dzucconi/garden"
   },
   "scripts": {
-    "generate": "node scripts/generateSvgs",
+    "generate": "rm -rf src/svgs/ && mkdir src/svgs/ && npx ts-node scripts/generateSvgs",
     "clean": "rm -rf dist/",
     "copy:images": "mkdir -p dist && mkdir -p dist/images && cp -R src/images/* dist/images",
     "copy:svgs": "mkdir -p dist && mkdir -p dist/svgs && cp -R src/svgs/* dist/svgs",
@@ -17,6 +17,7 @@
     "start": "yarn copy && parcel src/index.html --open"
   },
   "devDependencies": {
+    "@types/node": "^13.13.4",
     "parcel": "1.12.4",
     "typescript": "3.8.3"
   },

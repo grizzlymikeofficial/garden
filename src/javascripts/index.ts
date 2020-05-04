@@ -86,6 +86,21 @@ const STRATEGIES: Strategy[] = [
     ),
 ];
 
+const size = () => {
+  // More likely to sample the small sizes rather than the large
+  return sample(
+    sample([
+      SIZES.small,
+      SIZES.small,
+      SIZES.small,
+      SIZES.small,
+      SIZES.medium,
+      SIZES.medium,
+      SIZES.large,
+    ])
+  );
+};
+
 const load = (src: string) =>
   new Promise((resolve) => {
     const img = renderNode(generate.image({ src }));
@@ -109,9 +124,8 @@ const render = () => {
       sample.map(({ image: { src } }) => src)
     )
     .then((srcs) => {
-      const size = sample(SIZES.slice(0, 10));
       const strategy = sample(STRATEGIES);
-      const layers = strategy(size, srcs);
+      const layers = strategy(size(), srcs);
 
       Promise.all(srcs.map(load)).then(() => {
         DOM.app.innerHTML = layers.join("");
