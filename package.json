@@ -17,7 +17,7 @@
     "start": "yarn copy && parcel src/index.html --open"
   },
   "devDependencies": {
-    "@types/node": "13.13.4",
+    "@types/node": "13.13.5",
     "parcel": "1.12.4",
     "typescript": "3.8.3"
   },
