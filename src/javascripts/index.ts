@@ -1,4 +1,4 @@
-import parameters from "queryparams";
+import { configure } from "queryparams";
 import imagesLoaded from "imagesloaded";
 
 const ENDPOINT =
@@ -33,10 +33,14 @@ import { generate } from "./lib/generate";
 import { renderNode } from "./lib/renderNode";
 import { loadingIndicator } from "./lib/loadingIndicator";
 
+const parameters = configure({ period: 7500 });
+
 // @ts-ignore
 window.parameters = parameters;
 
-const { period: PERIOD }: { period: number } = parameters({ period: 7500 });
+const {
+  params: { period: PERIOD },
+} = parameters;
 
 const DOM = {
   app: document.getElementById("app"),
@@ -87,7 +91,6 @@ const STRATEGIES: Strategy[] = [
 ];
 
 const size = () => {
-  // More likely to sample the small sizes rather than the large
   return sample([
     ...SIZES.extraSmall,
     ...SIZES.small,
@@ -95,7 +98,6 @@ const size = () => {
     ...SIZES.small,
     ...SIZES.small,
     ...SIZES.medium,
-    ...SIZES.large,
   ]);
 };
 

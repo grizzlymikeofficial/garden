@@ -851,6 +851,20 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
+"@types/imagesloaded@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@types/imagesloaded/-/imagesloaded-4.1.2.tgz#da743c8d9f4a04f795e99d7921aae7c20af5d2e1"
+  integrity sha512-QxpoYhaYgv1qXwwPd6EnQFLkzrRZaecIafPsY51fnrsr+qIh0wrPVaOQirBaFl+FjFHk5BMfpf+6QHy0lRrcNw==
+  dependencies:
+    "@types/jquery" "*"
+
+"@types/jquery@*":
+  version "3.3.38"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.38.tgz#6385f1e1b30bd2bff55ae8ee75ea42a999cc3608"
+  integrity sha512-nkDvmx7x/6kDM5guu/YpXkGZ/Xj/IwGiLDdKM99YA5Vag7pjGyTJ8BNUh/6hxEn/sEu5DKtyRgnONJ7EmOoKrA==
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/node@13.13.5":
   version "13.13.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.5.tgz#96ec3b0afafd64a4ccea9107b75bf8489f0e5765"
@@ -860,6 +874,11 @@
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+
+"@types/sizzle@*":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
+  integrity sha512-7EJYyKTL7tFR8+gDbB6Wwz/arpGa0Mywk1TJbNzKzHtzbwVmY4HR9WqS5VV7dsBUKQmPNr192jHr/VpBluj/hg==
 
 abab@^2.0.0:
   version "2.0.3"
@@ -2256,11 +2275,6 @@ fragment-cache@^0.2.1:
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
   dependencies:
     map-cache "^0.2.2"
-
-frame-interval@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/frame-interval/-/frame-interval-0.0.2.tgz#f1ea7552fd1c096dbe1629f5f967fe410ab198bf"
-  integrity sha1-8ep1Uv0cCW2+Fin1+Wf+QQqxmL8=
 
 fresh@0.5.2:
   version "0.5.2"
@@ -4024,16 +4038,21 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qs@^6.3.0, qs@~6.5.2:
+qs@^6.9.4:
+  version "6.9.4"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
+  integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+
+qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-queryparams@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-0.1.0.tgz#8a467d637231e96f26b401bf622943d100e9fd55"
-  integrity sha512-/yUHhW2rwzengvqCjIUx3O6e5YRB5euXMjygm8CzKB+FRzgSZAhBVTEF8AyOuRi8H2WQmRZ5c8f/mMtS0aSEWg==
+queryparams@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-1.0.2.tgz#6e86e0000f7c6bb269bfaa26472a9a5c339ec3ab"
+  integrity sha512-/qQxEhlMNcVOXjGPGHgZjUk8qJLfUx+gnSjhl985nUpAWEMRcL71G8IAm58JC9UGL7MUoL/Rvyb6nGvn/QHwuA==
   dependencies:
-    qs "^6.3.0"
+    qs "^6.9.4"
 
 querystring-es3@^0.2.0:
   version "0.2.1"
