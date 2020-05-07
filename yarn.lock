@@ -851,7 +851,7 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@types/imagesloaded@^4.1.2":
+"@types/imagesloaded@4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@types/imagesloaded/-/imagesloaded-4.1.2.tgz#da743c8d9f4a04f795e99d7921aae7c20af5d2e1"
   integrity sha512-QxpoYhaYgv1qXwwPd6EnQFLkzrRZaecIafPsY51fnrsr+qIh0wrPVaOQirBaFl+FjFHk5BMfpf+6QHy0lRrcNw==
