@@ -20,7 +20,7 @@
     "@types/imagesloaded": "4.1.2",
     "@types/node": "13.13.8",
     "parcel": "1.12.4",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   },
   "dependencies": {
     "howler": "2.2.0",
