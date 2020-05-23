@@ -1,5 +1,6 @@
 import { configure } from "queryparams";
 import imagesLoaded from "imagesloaded";
+import screenfull from "screenfull";
 
 const ENDPOINT =
   "https://atlas.auspic.es/graph/ec630788-ceba-4f2a-b06a-b7a6827242ce";
@@ -136,3 +137,9 @@ const render = () => {
 };
 
 render();
+
+if (screenfull.isEnabled) {
+  document.addEventListener("click", () => {
+    screenfull.request();
+  });
+}

@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/imagesloaded": "4.1.2",
     "@types/node": "13.13.9",
+    "@types/screenfull": "^4.1.0",
     "parcel": "1.12.4",
     "typescript": "3.9.3"
   },
@@ -26,6 +27,7 @@
     "howler": "2.2.0",
     "imagesloaded": "4.1.4",
     "lodash.debounce": "4.0.8",
-    "queryparams": "1.0.18"
+    "queryparams": "1.0.18",
+    "screenfull": "^5.0.2"
   }
 }
