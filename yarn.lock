@@ -4054,10 +4054,10 @@ qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
-queryparams@1.0.42:
-  version "1.0.42"
-  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-1.0.42.tgz#f512085116815169aa8f86f1cc6098c10183b730"
-  integrity sha512-mWFQNliRWaI+07BrPXWXc/WPZI1BmY2hwk140c6iiNuVlzC59ciO6JiNCMf0qcC5OxXFECHpvmqOH4aIpkfHhQ==
+queryparams@1.0.43:
+  version "1.0.43"
+  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-1.0.43.tgz#0d5c1b062d007fcc345e4a1d63ee3d182fc250e6"
+  integrity sha512-p1smS104xTuna/Og2jndBLcDJVRrcVnd88l6QQ1XrQrlDl1aXkKqhxSVij8ay2OJDnYCY78odlBKySZPJYqDIw==
   dependencies:
     qs "^6.9.4"
 
