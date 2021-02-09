@@ -21,7 +21,7 @@
     "@types/node": "13.13.41",
     "@types/screenfull": "4.1.0",
     "parcel": "1.12.4",
-    "typescript": "3.9.7"
+    "typescript": "3.9.8"
   },
   "dependencies": {
     "howler": "2.2.1",
