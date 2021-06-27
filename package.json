@@ -24,7 +24,7 @@
     "typescript": "3.9.10"
   },
   "dependencies": {
-    "howler": "2.2.1",
+    "howler": "2.2.2",
     "imagesloaded": "4.1.4",
     "lodash.debounce": "4.0.8",
     "queryparams": "1.2.2",
