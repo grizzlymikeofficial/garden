@@ -1,4 +1,4 @@
-# Project name
+# Garden
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00f8cb80-3a7b-4948-8077-2fbdb988fcc8/deploy-status)](https://app.netlify.com/sites/damonzucconi-garden/deploys)
 
