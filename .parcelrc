@@ -1,0 +1,37 @@
+{
+    "extends": "@parcel/config-default",
+    "transformers": {
+        "*.{ts,tsx}": [
+            "@parcel/transformer-typescript-tsc"
+        ],
+        "*.{js,mjs,jsx,cjs}": [
+            "@parcel/transformer-js"
+        ],
+        "*.{css,pcss}": [
+            "@parcel/transformer-css"
+        ],
+        "*.{html,htm}": [
+            "@parcel/transformer-html"
+        ],
+        "*.{svg,png,jpg,jpeg,gif,webp}": [
+            "@parcel/transformer-raw"
+        ]
+    },
+    "optimizers": {
+        "*.{js,mjs,jsx,cjs}": [
+            "@parcel/optimizer-terser"
+        ],
+        "*.{css,pcss}": [
+            "@parcel/optimizer-cssnano"
+        ],
+        "*.{html,htm}": [
+            "@parcel/optimizer-htmlnano"
+        ]
+    },
+    "packagers": {
+        "*.{js,mjs,jsx,cjs}": "@parcel/packager-js",
+        "*.{css,pcss}": "@parcel/packager-css",
+        "*.{html,htm}": "@parcel/packager-html",
+        "*.{svg,png,jpg,jpeg,gif,webp}": "@parcel/packager-raw"
+    }
+}

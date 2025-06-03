@@ -1,33 +1,32 @@
 {
   "name": "garden",
-  "description": "",
-  "author": "Damon Zucconi",
   "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dzucconi/garden"
-  },
+  "description": "A garden of images",
+  "main": "index.js",
   "scripts": {
-    "generate": "rm -rf src/svgs/ && mkdir src/svgs/ && npx ts-node scripts/generateSvgs",
-    "clean": "rm -rf dist/",
-    "copy:images": "mkdir -p dist && mkdir -p dist/images && cp -R src/images/* dist/images",
+    "start": "npm run copy && parcel src/index.html --open",
+    "build": "npm run copy && parcel build src/index.html",
+    "copy": "npm run copy:images && npm run copy:svgs",
+    "copy:images": "mkdir -p dist && mkdir -p dist/images_olivia && cp -R src/images_olivia/* dist/images_olivia",
     "copy:svgs": "mkdir -p dist && mkdir -p dist/svgs && cp -R src/svgs/* dist/svgs",
-    "copy": "yarn copy:images && yarn copy:svgs",
-    "build": "yarn copy && parcel build src/index.html",
-    "start": "yarn copy && parcel src/index.html --open"
+    "generate": "rm -rf src/svgs/ && mkdir src/svgs/ && npx ts-node scripts/generateSvgs.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "imagesloaded": "4.1.4",
+    "queryparams": "1.2.2",
+    "screenfull": "5.2.0"
   },
   "devDependencies": {
-    "@types/imagesloaded": "4.1.2",
-    "@types/node": "13.13.52",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-typescript": "7.12.7",
+    "@types/imagesloaded": "^4.1.7",
+    "@types/node": "14.14.37",
     "@types/screenfull": "4.1.0",
     "parcel": "1.12.4",
     "typescript": "3.9.10"
-  },
-  "dependencies": {
-    "howler": "2.2.3",
-    "imagesloaded": "4.1.4",
-    "lodash.debounce": "4.0.8",
-    "queryparams": "1.2.2",
-    "screenfull": "5.2.0"
   }
 }

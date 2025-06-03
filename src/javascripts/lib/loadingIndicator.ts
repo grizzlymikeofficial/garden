@@ -1,9 +1,18 @@
 import { renderNode } from "./renderNode";
 
-const el = renderNode('<div class="Indicator"></div>');
+// Ensure renderNode returns a valid node or handle null case
+const el = renderNode('<div class="Indicator"></div>') as HTMLElement;
 
 export const loadingIndicator = {
   el,
-  show: () => document.body.appendChild(el),
-  hide: () => document.body.removeChild(el),
+  show: () => {
+    if (el) {
+      document.body.appendChild(el);
+    }
+  },
+  hide: () => {
+    if (el) {
+      document.body.removeChild(el);
+    }
+  },
 };
