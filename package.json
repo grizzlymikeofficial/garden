@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run copy && parcel src/index.html --open",
-    "build": "npm run copy && parcel build src/index.html",
+    "build": "npm run copy && parcel build src/index.html --public-url ./",
     "copy": "npm run generate && npm run copy:images && npm run copy:svgs",
     "copy:images": "mkdir -p dist && mkdir -p dist/images_olivia && cp -R src/images_olivia/* dist/images_olivia",
     "copy:svgs": "mkdir -p dist && mkdir -p dist/svgs && cp -R src/svgs/* dist/svgs",
